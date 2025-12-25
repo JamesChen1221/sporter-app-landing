@@ -69,10 +69,10 @@
             </div>
 
             <!-- 修改後更顯眼的提示按鈕 -->
-            <button onclick="document.getElementById('install-guide').scrollIntoView()" class="mt-12 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-50 text-blue-700 border border-blue-100 font-semibold hover:bg-blue-100 transition-all shadow-sm transform hover:scale-105 active:scale-95">
-                <i data-lucide="sparkles" class="w-5 h-5"></i>
-                <p>產品開發中<br>務必參考下方指示以獲得最佳體驗</p>
-                <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            <button onclick="document.getElementById('install-guide').scrollIntoView()" class="mt-12 inline-flex items-center gap-4 px-8 py-4 rounded-full bg-blue-50 text-blue-700 border border-blue-100 font-semibold hover:bg-blue-100 transition-all shadow-sm transform hover:scale-105 active:scale-95 text-left">
+                <i data-lucide="sparkles" class="w-6 h-6 shrink-0"></i>
+                <span>產品開發中<br><span class="text-sm opacity-80">務必參考下方指示以獲得最佳體驗</span></span>
+                <i data-lucide="chevron-down" class="w-5 h-5 shrink-0"></i>
             </button>
         </div>
     </section>
@@ -124,8 +124,9 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- 步驟 1 -->
                 <div class="flex flex-col bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
-                    <div class="aspect-[9/16] bg-slate-200 relative">
-                        <img src="images/s1.png" alt="Step 1" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/450x800?text=Step+1'">
+                    <div class="relative bg-white p-2">
+                        <!-- 修正點：移除 aspect 比例並使用 object-contain 確保圖片完整不裁切 -->
+                        <img src="images/s1.png" alt="Step 1" class="w-full h-auto object-contain block mx-auto" onerror="this.src='https://placehold.co/450x800?text=Step+1'">
                         <div class="absolute top-4 left-4 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold shadow-lg">1</div>
                     </div>
                     <div class="p-6">
@@ -136,8 +137,8 @@
 
                 <!-- 步驟 2 -->
                 <div class="flex flex-col bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
-                    <div class="aspect-[9/16] bg-slate-200 relative">
-                        <img src="images/s2.png" alt="Step 2" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/450x800?text=Step+2'">
+                    <div class="relative bg-white p-2">
+                        <img src="images/s2.png" alt="Step 2" class="w-full h-auto object-contain block mx-auto" onerror="this.src='https://placehold.co/450x800?text=Step+2'">
                         <div class="absolute top-4 left-4 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold shadow-lg">2</div>
                     </div>
                     <div class="p-6">
@@ -148,8 +149,8 @@
 
                 <!-- 步驟 3 -->
                 <div class="flex flex-col bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
-                    <div class="aspect-[9/16] bg-slate-200 relative">
-                        <img src="images/s3.png" alt="Step 3" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/450x800?text=Step+3'">
+                    <div class="relative bg-white p-2">
+                        <img src="images/s3.png" alt="Step 3" class="w-full h-auto object-contain block mx-auto" onerror="this.src='https://placehold.co/450x800?text=Step+3'">
                         <div class="absolute top-4 left-4 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold shadow-lg">3</div>
                     </div>
                     <div class="p-6">
@@ -160,8 +161,8 @@
 
                 <!-- 步驟 4 -->
                 <div class="flex flex-col bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
-                    <div class="aspect-[9/16] bg-slate-200 relative">
-                        <img src="images/s4.png" alt="Step 4" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/450x800?text=Step+4'">
+                    <div class="relative bg-white p-2">
+                        <img src="images/s4.png" alt="Step 4" class="w-full h-auto object-contain block mx-auto" onerror="this.src='https://placehold.co/450x800?text=Step+4'">
                         <div class="absolute top-4 left-4 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold shadow-lg">4</div>
                     </div>
                     <div class="p-6">
@@ -199,13 +200,6 @@
                 <p class="text-slate-500 mb-8">如有任何問題，歡迎透過電子郵件與我們聯繫</p>
                 
                 <div class="space-y-3">
-                    <!-- 
-                        【註記：關於電子郵件連結】
-                        方式 A (推薦): 連結到 Gmail 網頁撰寫介面 (這對沒有設定郵件軟體的使用者最有效)。
-                        網址格式：https://mail.google.com/mail/?view=cm&fs=1&to=你的Gmail地址
-                        
-                        方式 B (標準): mailto:你的Gmail地址 (這會嘗試開啟手機或電腦內建的郵件 App)。
-                    -->
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chanyangchen20@gmail.com" target="_blank" class="flex items-center justify-center gap-4 p-5 rounded-2xl bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md">
                         <i data-lucide="mail" class="w-5 h-5"></i>
                         <span class="font-semibold text-lg">發送電子郵件</span>
