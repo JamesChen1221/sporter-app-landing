@@ -21,12 +21,12 @@
             scroll-behavior: smooth;
         }
         /* 隱藏彈窗預設狀態 */
-        #contact-modal {
+        #contact-modal, #app-warning-modal {
             display: none;
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        #contact-modal.active {
+        #contact-modal.active, #app-warning-modal.active {
             display: flex;
             opacity: 1;
         }
@@ -57,18 +57,17 @@
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <!-- 【註記：請替換為你的 Sporter 網站網址】 -->
-                <a href="https://sporter-app.vercel.app/" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-blue-600 text-white px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 transform hover:-translate-y-1">
+                <!-- 修改：改為觸發警告彈窗 -->
+                <button onclick="toggleAppWarning(true)" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-blue-600 text-white px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 transform hover:-translate-y-1">
                     開啟 App <i data-lucide="external-link" class="w-5 h-5"></i>
-                </a>
+                </button>
                 
-                <!-- 【註記：請替換為你的 Google 表單網址】 -->
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScXwlyaUA84ciHeKqFcQJE2Wod27joSxrGHlGY9hha07VcYFA/viewform?usp=publish-editor" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-white border-2 border-blue-600 text-blue-600 px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-50 transition-all shadow-sm transform hover:-translate-y-1">
                     意見回饋 <i data-lucide="clipboard-list" class="w-5 h-5"></i>
                 </a>
             </div>
 
-            <!-- 修改後更顯眼的提示按鈕 -->
+            <!-- 提示按鈕 -->
             <button onclick="document.getElementById('install-guide').scrollIntoView()" class="mt-12 inline-flex items-center gap-4 px-8 py-4 rounded-full bg-blue-50 text-blue-700 border border-blue-100 font-semibold hover:bg-blue-100 transition-all shadow-sm transform hover:scale-105 active:scale-95 text-left">
                 <i data-lucide="sparkles" class="w-6 h-6 shrink-0"></i>
                 <span>產品開發中<br><span class="text-sm opacity-80">務必參考下方指示以獲得最佳體驗</span></span>
@@ -124,20 +123,19 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- 步驟 1 -->
                 <div class="flex flex-col bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
-                    <div class="relative bg-white p-2">
-                        <!-- 修正點：移除 aspect 比例並使用 object-contain 確保圖片完整不裁切 -->
+                    <div class="relative bg-white p-2 text-center">
                         <img src="images/s1.png" alt="Step 1" class="w-full h-auto object-contain block mx-auto" onerror="this.src='https://placehold.co/450x800?text=Step+1'">
                         <div class="absolute top-4 left-4 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold shadow-lg">1</div>
                     </div>
                     <div class="p-6">
-                        <h4 class="font-bold text-lg mb-2">先從上方按鈕開啟 App</h4>
-                        <p class="text-slate-500 text-sm">使用 Safari (iOS) 或 Chrome (Android) 開啟 App 網址。</p>
+                        <h4 class="font-bold text-lg mb-2">從上方按鈕開啟 App</h4>
+                        <p class="text-slate-500 text-sm">若是透過通訊軟體開啟，請先改為使用 Safari (iOS) 或 Chrome (Android) 開啟 App 網址。</p>
                     </div>
                 </div>
 
                 <!-- 步驟 2 -->
                 <div class="flex flex-col bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
-                    <div class="relative bg-white p-2">
+                    <div class="relative bg-white p-2 text-center">
                         <img src="images/s2.png" alt="Step 2" class="w-full h-auto object-contain block mx-auto" onerror="this.src='https://placehold.co/450x800?text=Step+2'">
                         <div class="absolute top-4 left-4 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold shadow-lg">2</div>
                     </div>
@@ -149,7 +147,7 @@
 
                 <!-- 步驟 3 -->
                 <div class="flex flex-col bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
-                    <div class="relative bg-white p-2">
+                    <div class="relative bg-white p-2 text-center">
                         <img src="images/s3.png" alt="Step 3" class="w-full h-auto object-contain block mx-auto" onerror="this.src='https://placehold.co/450x800?text=Step+3'">
                         <div class="absolute top-4 left-4 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold shadow-lg">3</div>
                     </div>
@@ -161,7 +159,7 @@
 
                 <!-- 步驟 4 -->
                 <div class="flex flex-col bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
-                    <div class="relative bg-white p-2">
+                    <div class="relative bg-white p-2 text-center">
                         <img src="images/s4.png" alt="Step 4" class="w-full h-auto object-contain block mx-auto" onerror="this.src='https://placehold.co/450x800?text=Step+4'">
                         <div class="absolute top-4 left-4 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold shadow-lg">4</div>
                     </div>
@@ -188,6 +186,30 @@
             </div>
         </div>
     </footer>
+
+    <!-- 新增：開啟 App 的開發中警告彈窗 -->
+    <div id="app-warning-modal" class="fixed inset-0 z-[70] flex items-center justify-center p-6 bg-slate-900/60 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-sm rounded-[2rem] shadow-2xl overflow-hidden transform transition-all scale-100">
+            <div class="p-8 text-center">
+                <div class="w-16 h-16 bg-orange-50 text-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-orange-100">
+                    <i data-lucide="alert-triangle" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-slate-800">產品開發中</h3>
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    為了確保您獲得最佳的使用體驗，請務必先閱讀下方的 <span class="text-blue-600 font-bold">4 步驟安裝說明</span>！
+                </p>
+                
+                <div class="space-y-3">
+                    <button onclick="goToInstructions()" class="w-full flex items-center justify-center gap-2 p-4 rounded-2xl bg-blue-50 text-blue-700 hover:bg-blue-100 transition-all font-semibold">
+                        <i data-lucide="book-open" class="w-5 h-5"></i> 返回閱讀說明
+                    </button>
+                    <a href="https://sporter-app.vercel.app/" target="_blank" onclick="toggleAppWarning(false)" class="w-full flex items-center justify-center gap-2 p-4 rounded-2xl bg-blue-600 text-white hover:bg-blue-700 transition-all font-semibold shadow-md">
+                        確認開啟 <i data-lucide="check" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 聯絡我們 彈窗 (Modal) -->
     <div id="contact-modal" class="fixed inset-0 z-[60] flex items-center justify-center p-6 bg-slate-900/60 backdrop-blur-sm">
@@ -235,7 +257,7 @@
             }
         });
 
-        // 控制彈窗開關
+        // 控制聯絡彈窗開關
         function toggleModal(show) {
             const modal = document.getElementById('contact-modal');
             if (show) {
@@ -247,10 +269,33 @@
             }
         }
 
+        // 控制開啟 App 警告彈窗
+        function toggleAppWarning(show) {
+            const modal = document.getElementById('app-warning-modal');
+            if (show) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // 返回閱讀說明邏輯
+        function goToInstructions() {
+            toggleAppWarning(false);
+            setTimeout(() => {
+                document.getElementById('install-guide').scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        }
+
         // 點擊背景也可關閉彈窗
-        document.getElementById('contact-modal').addEventListener('click', function(e) {
-            if (e.target === this) toggleModal(false);
-        });
+        window.onclick = function(event) {
+            const contactModal = document.getElementById('contact-modal');
+            const warningModal = document.getElementById('app-warning-modal');
+            if (event.target == contactModal) toggleModal(false);
+            if (event.target == warningModal) toggleAppWarning(false);
+        }
     </script>
 </body>
 </html>
