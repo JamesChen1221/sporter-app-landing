@@ -59,9 +59,9 @@ This project was built primarily with AI-assisted development. The design direct
 
 ## 立即體驗 / Try It Now
 
-🔗 [https://sporter-app.vercel.app/](https://sporter-app.vercel.app/)
+🔗 [https://sporter-app-landing.vercel.app/](https://sporter-app-landing.vercel.app/)
 
-![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://sporter-app.vercel.app/)
+![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://sporter-app-landing.vercel.app/)
 
 ---
 
