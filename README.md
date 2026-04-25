@@ -68,7 +68,5 @@ This project was built primarily with AI-assisted development. The design direct
 ## 其他資訊 / Additional Info
 
 - Sporter app 本體為私有專案，此 repo 僅包含引導網頁
-- 如有任何問題或合作意向，歡迎透過以下方式聯繫
 
 - The Sporter app itself is a private project; this repo contains only the landing page
-- For inquiries or collaboration, feel free to reach out
